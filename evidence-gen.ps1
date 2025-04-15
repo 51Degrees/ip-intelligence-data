@@ -2,6 +2,7 @@
 param(
     [int]$v4 = 0,
     [int]$v6 = 0,
+    [switch]$csv,
     [string]$path = "evidence.yml"
 )
 
@@ -26,16 +27,32 @@ function New-IPv6 {
 }
 
 # Prepare YAML content
-$yamlContent = "---`n"
-$prefix = "server.client-ip"
-for ($i = 0; $i -lt $v4; $i++) {
-    $yamlContent += "${prefix}: $(New-IPv4)`n---`n"
-}
-for ($i = 0; $i -lt $v6; $i++) {
-    $yamlContent += "${prefix}: $(New-IPv6)`n---`n"
+function Build-YAML {
+    $yamlContent = "---`n"
+    $prefix = "server.client-ip"
+    for ($i = 0; $i -lt $v4; $i++) {
+        $yamlContent += "${prefix}: $(New-IPv4)`n---`n"
+    }
+    for ($i = 0; $i -lt $v6; $i++) {
+        $yamlContent += "${prefix}: $(New-IPv6)`n---`n"
+    }
+    $yamlContent
 }
 
-# Write the YAML content to the specified file
-Set-Content -Path $path -Value $yamlContent -NoNewline
+# Prepare CSV content
+function Build-CSV {
+    $csvContent = ""
+    for ($i = 0; $i -lt $v4; $i++) {
+        $csvContent += "$(New-IPv4)`n"
+    }
+    for ($i = 0; $i -lt $v6; $i++) {
+        $csvContent += "$(New-IPv6)`n"
+    }
+    $csvContent
+}
 
-Write-Host "YAML file created successfully at $path."
+# Write the content to the specified file
+$Content = $csv ? (Build-CSV) : (Build-YAML)
+Set-Content -Path $path -Value $Content -NoNewline
+
+Write-Host "$($csv ? "CSV" : "YAML") file created successfully at $path."
