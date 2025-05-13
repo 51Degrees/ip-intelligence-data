@@ -33,7 +33,8 @@ The properties available in this file are:
 - RegisteredCountry
 - RegisteredName
 - RegisteredOwner
-- More properties are available for free in our [cloud service](https://configure.51degrees.com/), or on a commercial basis on [our website](https://51degrees.com/pricing).
+
+More properties are available as part of the Enterprise data file - [contact us](https://51degrees.com/contact-us).
 
 This 'lite' file is built from a subsection of all IPs and is updated less frequently than the Enterprise IPI data file.
 
