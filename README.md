@@ -7,7 +7,7 @@ This repo allows to obtain data needed to run IP Intelligence examples:
 - evidence files with lists of random IP addresses needed for some examples
 - scripts to generate lists of random IP addresses like the above
 - scripts to download 'Lite' IP Intelligence data file
-- translation files to to support translation engine and examples
+- translation files to support translation engine and examples
 
 ## Download Lite data file
 
