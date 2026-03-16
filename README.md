@@ -7,6 +7,7 @@ This repo allows to obtain data needed to run IP Intelligence examples:
 - evidence files with lists of random IP addresses needed for some examples
 - scripts to generate lists of random IP addresses like the above
 - scripts to download 'Lite' IP Intelligence data file
+- translation files to support translation engine and examples
 
 ## Download Lite data file
 
@@ -59,3 +60,14 @@ Pre-generated test files containing 20,000 of random IPs.
 
 - evidence.csv - Each line contains a single IP.
 - evidence.yml - A multi-record yaml file where each line contains the HTTP header name and value as the key/value pair. Values may be wrapped in single quotes.
+
+## Translation
+
+Folder containing yaml files for translation of country names into several target languages. This data is used in examples and by the translation engine.
+
+### Folder structure
+|--Translations
+| |--Translation Source (e.g. "OSM")
+| | |-- Translation File (e.g. "countries.fr_FR.yml")
+
+Each translation file contains key-value pairs of "English country name: country name in target language".
