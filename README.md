@@ -25,6 +25,19 @@ or run a script to download files from Azure.
 
 ## Files
 
+### `51Degrees-IPIV4AsnIpiV41.ipi`
+
+The on-premise IP Intelligence data file for Asn properties.
+
+The [properties](https://51degrees.me/developers/property-dictionary?item=Asn%7CAll) available in this file are:
+
+- Asn
+- AsnName
+
+More properties are available as part of the Enterprise data file - [contact us](https://51degrees.com/contact-us).
+
+This file is updated monthly.
+
 ### `51Degrees-LiteV41.ipi`
 
 The 'lite' on-premise IP Intelligence data file.
