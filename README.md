@@ -13,7 +13,7 @@ This repo allows to obtain data needed to run IP Intelligence examples:
 
 ### From Azure
 Either get it from the URL: 
-https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-LiteIpiV41.ipi.gz
+https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-IPIV4LiteIpiV41.ipi.gz
 
 or run a script to download files from Azure.
 

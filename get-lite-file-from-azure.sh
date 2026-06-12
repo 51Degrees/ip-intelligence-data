@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Local vars
-ARCHIVE_URL="https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-LiteIpiV41.ipi.gz"
+ARCHIVE_URL="https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-IPIV4LiteIpiV41.ipi.gz"
 ARCHIVE_NAME="51Degrees-LiteV41.ipi.gz"
 ARCHIVED_NAME="51Degrees-LiteV41.ipi"
 
