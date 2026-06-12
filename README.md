@@ -3,7 +3,6 @@
 ## Introduction
 
 This repo allows to obtain data needed to run IP Intelligence examples:
-- a URL and script to download 'Lite' IP Intelligence data file
 - evidence files with lists of random IP addresses needed for some examples
 - scripts to generate lists of random IP addresses like the above
 - scripts to download 'Lite' IP Intelligence data file
@@ -11,11 +10,7 @@ This repo allows to obtain data needed to run IP Intelligence examples:
 
 ## Download Lite data file
 
-### From Azure
-Either get it from the URL: 
-https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-IPIV4LiteIpiV41.ipi.gz
-
-or run a script to download files from Azure.
+Run one of the scripts in this repository to download and unpack the file:
 
 | Script | Language | OS |
 | -- | -- | -- |
