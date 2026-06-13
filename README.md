@@ -1,4 +1,4 @@
-# ![51Degrees](https://51degrees.com/DesktopModules/FiftyOne/Distributor/Logo.ashx?utm_source=github&utm_medium=repository&utm_content=home&utm_campaign=c-open-source "Data rewards the curious") **IP Intelligence Data Files**
+# ![51Degrees](https://51degrees.com/img/logo.png?utm_source=github&utm_medium=readme&utm_campaign=ip-intelligence-data&utm_content=readme.md&utm_term=ip-intelligence-data-files "Data rewards the curious") **IP Intelligence Data Files**
 
 ## Introduction
 
@@ -34,7 +34,7 @@ The [properties](https://51degrees.me/developers/property-dictionary?item=Asn%7C
 - Asn
 - AsnName
 
-More properties are available as part of the Enterprise data file - [contact us](https://51degrees.com/contact-us).
+More properties are available as part of the Enterprise data file - [contact us](https://51degrees.com/contact-us?utm_source=github&utm_medium=readme&utm_campaign=ip-intelligence-data&utm_content=readme.md&utm_term=51degrees-ipiv4asnipiv41-ipi).
 
 This file is updated monthly.
 
@@ -48,7 +48,7 @@ The properties available in this file are:
 - RegisteredName
 - RegisteredOwner
 
-More properties are available as part of the Enterprise data file - [contact us](https://51degrees.com/contact-us).
+More properties are available as part of the Enterprise data file - [contact us](https://51degrees.com/contact-us?utm_source=github&utm_medium=readme&utm_campaign=ip-intelligence-data&utm_content=readme.md&utm_term=51degrees-litev41-ipi).
 
 This 'lite' file is built from a subsection of all IPs and is updated less frequently than the Enterprise IPI data file.
 
