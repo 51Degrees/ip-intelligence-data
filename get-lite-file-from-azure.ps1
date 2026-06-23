@@ -6,7 +6,7 @@ param(
 )
 
 # Local Vars
-$ArchiveUrl = "https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-LiteIpiV41.ipi.gz"
+$ArchiveUrl = "https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-IPIV4LiteIpiV41.ipi.gz"
 $ArchiveName = (Join-Path (Get-Location) "51Degrees-LiteV41.ipi.gz")
 $ArchivedName = (Join-Path (Get-Location) "51Degrees-LiteV41.ipi")
 

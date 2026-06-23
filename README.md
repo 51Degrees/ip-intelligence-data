@@ -3,7 +3,6 @@
 ## Introduction
 
 This repo allows to obtain data needed to run IP Intelligence examples:
-- a URL and script to download 'Lite' IP Intelligence data file
 - evidence files with lists of random IP addresses needed for some examples
 - scripts to generate lists of random IP addresses like the above
 - scripts to download 'Lite' IP Intelligence data file
@@ -11,16 +10,29 @@ This repo allows to obtain data needed to run IP Intelligence examples:
 
 ## Download Lite data file
 
-### From Azure
-Either get it from the URL: 
-https://51ddatafiles.blob.core.windows.net/enterpriseipi/51Degrees-LiteIpiV41.ipi.gz
-
-or run a script to download files from Azure.
+The Lite data file is too large to commit to this repository, so one of the
+scripts below downloads it from 51Degrees storage instead:
 
 | Script | Language | OS |
 | -- | -- | -- |
 | `./get-lite-file-from-azure.ps1` | PowerShell | [Windows](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5), [Linux](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.5), [macOS](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.5) |
 | `./get-lite-file-from-azure.sh` | Shell | Linux, macOS |
+
+Run the script from this directory, because the examples and tests look for
+the file here:
+
+```pwsh
+cd ip-intelligence-data
+./get-lite-file-from-azure.ps1
+```
+
+The script downloads the archive as `51Degrees-LiteV41.ipi.gz` (about 230 MB),
+prints its MD5 hash and unpacks it to `51Degrees-LiteV41.ipi` (about 460 MB)
+in the directory it is run from. If the archive is already present the
+download is skipped and the existing archive is unpacked again. Pass `-Force`
+(PowerShell) or `-f` (shell) to download a fresh copy, for example when a new
+monthly data file has been published. The shell script needs `curl`, `gunzip`
+and `md5sum` (`md5` on macOS) to be available.
 
 
 ## Files
