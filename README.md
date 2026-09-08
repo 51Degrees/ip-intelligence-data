@@ -86,6 +86,31 @@ Pre-generated test files containing 20,000 of random IPs.
 - evidence.csv - Each line contains a single IP.
 - evidence.yml - A multi-record yaml file where each line contains the HTTP header name and value as the key/value pair. Values may be wrapped in single quotes.
 
+## Tests
+
+The download scripts are covered by a Pester 5 test suite:
+
+| File | Role |
+| -- | -- |
+| `ci/run-unit-tests.ps1` | Entry point. Installs Pester if needed, runs the suite, and writes a NUnit XML report to `test-results/`. |
+| `tests/check-dl-script.tests.ps1` | Pester test suite with 8 test cases (4 per download script). |
+
+Run all tests (requires [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell)):
+
+```pwsh
+cd ip-intelligence-data
+./ci/run-unit-tests.ps1
+```
+
+Each test performs a **real download** from 51Degrees storage into an isolated
+temporary directory and verifies the archive is fetched, its printed MD5
+matches a re-computed hash, and the file unpacks correctly. The test cases are:
+
+- `Downloads both files (no args)` - no flags (both Lite + Asn files)
+- `Downloads Lite only (-Lite)` - only the Lite file
+- `Downloads Asn only (-Asn)` - only the Asn file
+- `Forces re-download (-Force)` - pre-seeds dummy files then passes `-Force` to verify they are overwritten
+
 ## Translation
 
 Folder containing yaml files for translation of country names into several target languages. This data is used in examples and by the translation engine.
