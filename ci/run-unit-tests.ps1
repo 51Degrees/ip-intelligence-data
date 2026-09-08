@@ -7,7 +7,7 @@
 
 [CmdletBinding()]
 param(
-    [string]$ResultsDir = "test-results",
+    [string]$ResultsDir = "test-results/unit",
     [string]$ResultsFileName = "check-dl-script.xml"
 )
 
