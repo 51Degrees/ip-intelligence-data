@@ -11,7 +11,7 @@ This repo allows to obtain data needed to run IP Intelligence examples:
 ## Download Lite data file
 
 The Lite data file is too large to commit to this repository, so one of the
-scripts below downloads it from 51Degrees storage instead:
+scripts below downloads it from the 51Degrees Distributor instead:
 
 | Script | Language | OS |
 | -- | -- | -- |
@@ -66,7 +66,7 @@ This 'lite' file is built from a subsection of all IPs and is updated less frequ
 
 ### `get-lite-file-from-azure.ps1`/`.sh`
 
-Convenience scripts to download (and unpack) data file, stored on Azure Blob Storage.
+Convenience scripts to download (and unpack) the data files from the 51Degrees Distributor, which needs no License Key.
 
 ### `evidence-gen.ps1`
 
@@ -102,7 +102,7 @@ cd ip-intelligence-data
 ./ci/run-unit-tests.ps1
 ```
 
-Each test performs a **real download** from 51Degrees storage into an isolated
+Each test performs a **real download** from the Distributor into an isolated
 temporary directory and verifies the archive is fetched, its printed MD5
 matches a re-computed hash, and the file unpacks correctly. The test cases are:
 
