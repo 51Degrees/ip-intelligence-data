@@ -2,7 +2,7 @@
 # Pester test suite for get-lite-file-from-azure.ps1/.sh download scripts.
 #
 # Data-driven tests: one case per (script x invocation mode). Each case
-# performs a REAL download from Azure blob storage into an isolated temp dir.
+# performs a REAL download from the Distributor into an isolated temp dir.
 
 [CmdletBinding()]
 param()
