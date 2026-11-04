@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# Base URL for all data files
-BASE_URL="https://51ddatafiles.blob.core.windows.net/enterpriseipi/"
+# The Distributor's free downloads, which need no License Key. The source
+# value lets downloads be counted by where they come from.
+BASE_URL="https://distributor.51degrees.com/api/v2/free/"
+SOURCE="ip-intelligence-data"
 
-# Known files: "remote basename|local .ipi name"
-LITE_FILE="51Degrees-IPIV4LiteIpiV41.ipi.gz|51Degrees-LiteV41.ipi"
-ASN_FILE="51Degrees-IPIV4AsnIpiV41.ipi.gz|51Degrees-IPIV4AsnIpiV41.ipi"
+# Known files: "download name|local .ipi name"
+LITE_FILE="ipi-lite-v41|51Degrees-LiteV41.ipi"
+ASN_FILE="ipi-asn-v41|51Degrees-IPIV4AsnIpiV41.ipi"
 
 # Default values
 FORCE=false
@@ -48,12 +50,13 @@ fi
 process_file() {
     local remote="$1"
     local archived_name="$2"
-    local archive_url="${BASE_URL}${remote}"
+    local archive_url="${BASE_URL}${remote}?source=${SOURCE}"
     local archive_name="${archived_name}.gz"
 
     # Download if forced or archive doesn't exist
     if [ "$FORCE" = true ] || [ ! -f "$archive_name" ]; then
-        curl -o "$archive_name" "$archive_url"
+        # -f fails on an error answer instead of saving it as the archive.
+        curl -fL -o "$archive_name" "$archive_url"
     else
         echo "Archive found. Download skipped."
     fi
